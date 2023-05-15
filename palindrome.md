@@ -10,7 +10,17 @@ Palindrome指的是回文，而这里需要找的是回文数，指的是1、121
 # My Solution
 
   ```java
-  public boolean isPalindrome(int x) {
-
-  }
+public boolean isPalindrome(int x) {
+        String s = x + "";
+        char[] chars = s.toCharArray();
+        StringBuilder reverseSb = new StringBuilder();
+        for (int i = chars.length - 1; i >=0; i--) {
+            reverseSb.append(chars[i]);
+        }
+        if (reverseSb.toString().equals(s)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
   ```
